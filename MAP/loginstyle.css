@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.login {
+    background-color: rgba(218, 171, 17, 0.568);
+    width: 400px;
+    color: #000000;
+    padding: 40px;
+    box-shadow: 10px 10px #5a4200;
+    text-align: center;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+
+
+    
+}

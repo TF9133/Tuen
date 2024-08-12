@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    /* CSS styles are the same as before */
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <h2>Login</h2>
+    <form id="login-form">
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" required>
+
+      <button type="submit">Login</button>
+    </form>
+  </div>
+
+  <script>
+    // Create a simple in-memory database to store user accounts
+    const database = {
+      users: [
+        { username: 'admin', password: 'password' },
+        { username: 'john', password: 'john123' },
+        { username: 'jane', password: 'jane456' }
+      ]
+    };
+
+    const form = document.getElementById('login-form');
+    form.addEventListener('submit', (event) => {
+      event.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      // Check if the user exists in the database
+      const user = database.users.find(u => u.username === username);
+      if (user && user.password === password) {
+        // Redirect the user to another page
+        window.location.href = 'https://example.com/dashboard';
+      } else {
+        alert('Invalid username or password');
+      }
+    });
+  </script>
+</body>
+</html>

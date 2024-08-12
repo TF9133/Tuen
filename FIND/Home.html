@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="homecss.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home - 輕鬼屯元天</title>
+</head>
+<body>
+    <header>
+    <div class="square"></div>
+    <h1>輕鬼屯元天</h1>
+    <h4>PAC-MAN IN LRT</h4>
+    <ul>
+    <li><a href="Login.html">最新消息</li></a>
+    <li><a href="#">輕鬼站站食</li></a>
+    <li><a href="#">圖出屯元天</li></a>
+    <li><a href="#">地點查閱</li></a>
+    <li><a href="Login.html">登出</li></a>
+    </ul>
+</header>
+<main>
+    <section>    
+        <style>
+         .home {
+            font-size: 40px;
+        }   
+        .home h3 {
+            font-size: 40px;
+        }
+      </style>
+      <div class=".home">
+        <h3 >首頁</h3>
+      </div>
+
+
+    <style>
+        .time-container {
+        position: absolute;
+        right: 5%;
+        top: 150px;
+        color: #000000;
+        padding: 20px 150px;
+        text-align: left;
+        background-color: rgb(255, 255, 255);
+        border-radius: 10px;
+        }
+    
+        .time-container h1 {
+          font-size: 40px;
+          margin-bottom: 10px;
+          height: 60px;
+          color: black;
+        }
+    
+        .time-container p {
+          font-size: 25px;
+          color: #666;
+          text-align: left;
+          height: 60px;
+        }
+      </style>
+    </head>
+    <body>
+      <div class="time-container">
+        <p>目前時間</p>
+        <h1 id="current-time"></h1>
+      </div>
+    
+      <script>
+        function updateTime() {
+          const currentTime = new Date().toLocaleTimeString();
+          document.getElementById('current-time').textContent = currentTime;
+        }
+    
+        setInterval(updateTime, 1000);
+      </script>
+      </section>
+</main>
+
+    </body>
+</html>

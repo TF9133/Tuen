@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="loginstyle.css" />
+    </head>
+    <body>
+        <form action="action.js" class="login">
+            <h1>Login</h1>
+            <input type="text" placeholder="Username" />
+            <input type="password" placeholder="Password" />
+            <input type="submit" placeholder="Submit" />
+        </form>
+        <script>
+            let data = {
+                "ChanKaKit": "20161203Aa@",
+                "ChiuLongHei": "20161203Aa@"
+            }
+    
+            function login() {
+                let User = document.getElementById("Username");
+                let Pass = document.getElementById("Password");
+                if (data[User] != undefined) {
+                    if (data[User] === Pass) {
+                        console.log("login success");
+                    } else {
+                        console.log("login faild");
+                    }
+                } else {
+                    console.log("login faild");
+                }
+                event.preventDefault();
+                }
+            document.getElementById("login").addEventListener("click", login);
+            </script>
+    </body>
+</html>
